@@ -5,13 +5,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './Telas/Home';
 import DetailScreen from './Telas/DetailScreen';
+import Login from './Telas/Login';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen name="Login" component={Login} options={{ title: 'Login' }} />
+
         {/* Tela principal de notícias */}
         <Stack.Screen name="Home" component={Home} options={{ title: 'Notícias' }} />
         
